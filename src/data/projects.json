@@ -1,0 +1,96 @@
+[
+  {
+    "id": "formation-P2",
+    "title": "Booki",
+    "imageName": "booki.webp",
+    "description": "Transformation d'une maquette en site web avec HTML5 et CSS3",
+    "technos": [
+      { "name": "HTML", "logo": "html-5.png" },
+      { "name": "CSS", "logo": "css-3.png" }
+    ],
+    "githubLink": "https://github.com/SylvainBruyat/OC-DW-P2-Booki-planification-vacances/tree/master",
+    "projectLink": "https://sylvainbruyat.github.io/OC-DW-P2-Booki-planification-vacances/"
+  },
+  {
+    "id": "formation-P3",
+    "title": "Ohmyfood",
+    "imageName": "ohmyfood.webp",
+    "description": "Dynamisation d'une page web grâce à des animations",
+    "technos": [
+      { "name": "HTML", "logo": "html-5.png" },
+      { "name": "CSS", "logo": "css-3.png" },
+      { "name": "Sass", "logo": "sass.png" }
+    ],
+    "githubLink": "https://github.com/SylvainBruyat/OC-P3-Ohmyfood",
+    "projectLink": "https://sylvainbruyat.github.io/OC-P3-Ohmyfood/"
+  },
+  {
+    "id": "formation-P4",
+    "title": "La Panthère",
+    "imageName": "panthere.webp",
+    "description": "Optimisation SEO d'un site web existant",
+    "technos": [
+      { "name": "HTML", "logo": "html-5.png" },
+      { "name": "CSS", "logo": "css-3.png" }
+    ],
+    "githubLink": "https://github.com/SylvainBruyat/OC-P4-la-panthere",
+    "projectLink": "https://sylvainbruyat.github.io/OC-P4-la-panthere/"
+  },
+  {
+    "id": "formation-P5",
+    "title": "Kanap",
+    "imageName": "kanap.webp",
+    "description": "Développement de la partie frontend d'un site e-commerce en JavaScript",
+    "technos": [{ "name": "JavaScript", "logo": "js.png" }],
+    "githubLink": "https://github.com/SylvainBruyat/OC-P5-Kanap-frontend",
+    "projectLink": "https://sylvainbruyat.github.io/OC-P5-Kanap-frontend/"
+  },
+  {
+    "id": "formation-P6",
+    "title": "Hot Takes",
+    "imageName": "hottakes.webp",
+    "description": "Développement d'une API REST sécurisée pour le backend d'une application d'avis gastronomiques",
+    "technos": [
+      { "name": "JavaScript", "logo": "js.png" },
+      { "name": "Node.js", "logo": "nodejs.png" },
+      { "name": "Express.js", "logo": "" },
+      { "name": "NoSQL", "logo": "" },
+      { "name": "MongoDB", "logo": "mongodb.png" }
+    ],
+    "githubLink": "https://github.com/SylvainBruyat/OC-P6-Piiquante-backend",
+    "projectLink": ""
+  },
+  {
+    "id": "formation-P7",
+    "title": "Groupomania",
+    "imageName": "groupomania.webp",
+    "description": "Conception et développement fullstack d'un MVP de réseau social d'entreprise",
+    "technos": [
+      { "name": "HTML", "logo": "html-5.png" },
+      { "name": "CSS", "logo": "css-3.png" },
+      { "name": "JavaScript", "logo": "js.png" },
+      { "name": "React", "logo": "react.png" },
+      { "name": "Node.js", "logo": "nodejs.png" },
+      { "name": "Express.js", "logo": "" },
+      { "name": "NoSQL", "logo": "" },
+      { "name": "MongoDB", "logo": "mongodb.png" }
+    ],
+    "githubLink": "https://github.com/SylvainBruyat/OC-P7-Groupomania",
+    "projectLink": ""
+  },
+  {
+    "id": "perso-1",
+    "title": "Portfolio",
+    "imageName": "portfolio.webp",
+    "description": "Le site sur lequel vous êtes actuellement (qui a dit récursivité ?)",
+    "technos": [
+      { "name": "HTML", "logo": "html-5.png" },
+      { "name": "CSS", "logo": "css-3.png" },
+      { "name": "Sass", "logo": "sass.png" },
+      { "name": "JavaScript", "logo": "js.png" },
+      { "name": "React", "logo": "react.png" }
+    ],
+    "githubLink": "",
+    "projectLink": "/"
+  }
+]

@@ -1,0 +1,8 @@
+@use '../utils/variables' as vars;
+
+.projects-wrapper {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}

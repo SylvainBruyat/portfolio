@@ -1,6 +1,14 @@
 @use './normalize.css';
 
+// utils;
+
 @use './base/base';
 
 @use './components/header';
 @use './components/footer';
+@use './components/projectCard';
+@use './components/techno';
+
+// layouts
+
+@use './pages/projects';
