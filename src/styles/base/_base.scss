@@ -1,0 +1,39 @@
+@use '../utils/variables' as vars;
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  font-family: vars.$font-primary;
+  margin: 0;
+  background-color: vars.$color-primary;
+  color: white;
+}
+
+h1 {
+  color: vars.$color-tertiary;
+  text-align: center;
+}
+
+main {
+  margin-top: vars.$header-height;
+  padding: 0 10px;
+}
+
+.text-emphasis {
+  color: vars.$color-secondary;
+  font-weight: bold;
+}
