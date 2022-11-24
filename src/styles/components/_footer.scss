@@ -1,0 +1,11 @@
+@use '../utils/variables' as vars;
+
+footer {
+  height: 100px;
+  border-top: 1px solid vars.$color-secondary;
+}
+
+.footer__text {
+  text-align: center;
+  font-size: 0.8rem;
+}
