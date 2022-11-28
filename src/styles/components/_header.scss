@@ -13,14 +13,14 @@ header {
   border-bottom: 1px solid vars.$color-secondary;
 }
 
-.header__link-list {
+.header-links__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 1.5rem;
 }
 
-.header__links {
+.header-links {
   display: inline-block;
   position: relative;
   margin: 0 15px;
@@ -28,14 +28,35 @@ header {
   color: vars.$color-secondary;
   font-size: 1.2rem;
   font-weight: bold;
+  border-bottom: 2px solid vars.$color-primary;
   cursor: pointer;
   transition: transform 0.1s linear;
 
-  &--active {
+  &__active {
     border-bottom: 2px solid vars.$color-tertiary;
   }
 
-  &:hover:not(&--active) {
+  &__icon {
+    font-size: 2rem;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+    @media screen and (max-width: 767px) {
+      display: unset;
+    }
+  }
+
+  &__text {
+    @media screen and (min-width: 768px) {
+      display: unset;
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  &:hover:not(&__active) {
     transform: scale(1.1);
   }
 }

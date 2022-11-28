@@ -4,53 +4,49 @@ export default function Header() {
   return (
     <header>
       <nav>
-        <ul className="header__link-list">
+        <ul className="header-links__list">
           <li>
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive
-                  ? 'header__links header__links--active'
-                  : 'header__links'
+                isActive ? 'header-links header-links__active' : 'header-links'
               }
             >
-              Accueil
+              <i class="fa-solid fa-house header-links__icon"></i>
+              <span className="header-links__text">Accueil</span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive
-                  ? 'header__links header__links--active'
-                  : 'header__links'
+                isActive ? 'header-links header-links__active' : 'header-links'
               }
             >
-              A propos
+              <i class="fa-regular fa-address-card header-links__icon"></i>
+              <span className="header-links__text">A propos</span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/projects"
               className={({ isActive }) =>
-                isActive
-                  ? 'header__links header__links--active'
-                  : 'header__links'
+                isActive ? 'header-links header-links__active' : 'header-links'
               }
             >
-              Projets
+              <i class="fa-solid fa-laptop-code header-links__icon"></i>
+              <span className="header-links__text">Projets</span>
             </NavLink>
           </li>
           <li>
             <NavLink
               to="/skills"
               className={({ isActive }) =>
-                isActive
-                  ? 'header__links header__links--active'
-                  : 'header__links'
+                isActive ? 'header-links header-links__active' : 'header-links'
               }
             >
-              Compétences
+              <i class="fa-solid fa-flask header-links__icon"></i>
+              <span className="header-links__text">Compétences</span>
             </NavLink>
           </li>
         </ul>
