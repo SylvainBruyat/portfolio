@@ -4,11 +4,13 @@
 
 @use './base/base';
 
+@use './components/buttonLink';
+@use './components/techno';
 @use './components/header';
 @use './components/footer';
 @use './components/projectCard';
-@use './components/techno';
 
 // layouts
 
+@use './pages/home';
 @use './pages/projects';

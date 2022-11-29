@@ -1,0 +1,34 @@
+@use '../utils/variables' as vars;
+
+.homepage {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+
+  &__h2 {
+    margin: 40px auto 20px auto;
+    padding-top: 40px;
+    width: 50%;
+    text-align: center;
+    border-top: 1px solid vars.$color-tertiary;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  &__picture {
+    max-width: 200px;
+    max-height: 240px;
+    border: 2px solid vars.$color-tertiary;
+    border-radius: 100px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__about div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+}
