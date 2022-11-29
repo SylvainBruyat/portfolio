@@ -8,12 +8,13 @@ header {
   z-index: 1;
   height: vars.$header-height;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   background-color: vars.$color-primary;
   border-bottom: 1px solid vars.$color-secondary;
 }
 
-.header-links__list {
+.header-links-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -32,31 +33,33 @@ header {
   cursor: pointer;
   transition: transform 0.1s linear;
 
-  &__active {
+  &--active {
     border-bottom: 2px solid vars.$color-tertiary;
   }
 
   &__icon {
     font-size: 2rem;
+  }
 
-    @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
+    &__icon {
       display: none;
     }
-    @media screen and (max-width: 767px) {
+    &__text {
       display: unset;
     }
   }
 
-  &__text {
-    @media screen and (min-width: 768px) {
+  @media screen and (max-width: 767px) {
+    &__icon {
       display: unset;
     }
-    @media screen and (max-width: 767px) {
+    &__text {
       display: none;
     }
   }
 
-  &:hover:not(&__active) {
+  &:hover:not(&--active) {
     transform: scale(1.1);
   }
 }

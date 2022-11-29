@@ -4,15 +4,15 @@ export default function Header() {
   return (
     <header>
       <nav>
-        <ul className="header-links__list">
+        <ul className="header-links-list">
           <li>
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? 'header-links header-links__active' : 'header-links'
+                isActive ? 'header-links header-links--active' : 'header-links'
               }
             >
-              <i class="fa-solid fa-house header-links__icon"></i>
+              <i className="fa-solid fa-house header-links__icon"></i>
               <span className="header-links__text">Accueil</span>
             </NavLink>
           </li>
@@ -20,10 +20,10 @@ export default function Header() {
             <NavLink
               to="/about"
               className={({ isActive }) =>
-                isActive ? 'header-links header-links__active' : 'header-links'
+                isActive ? 'header-links header-links--active' : 'header-links'
               }
             >
-              <i class="fa-regular fa-address-card header-links__icon"></i>
+              <i className="fa-regular fa-address-card header-links__icon"></i>
               <span className="header-links__text">A propos</span>
             </NavLink>
           </li>
@@ -31,10 +31,10 @@ export default function Header() {
             <NavLink
               to="/projects"
               className={({ isActive }) =>
-                isActive ? 'header-links header-links__active' : 'header-links'
+                isActive ? 'header-links header-links--active' : 'header-links'
               }
             >
-              <i class="fa-solid fa-laptop-code header-links__icon"></i>
+              <i className="fa-solid fa-laptop-code header-links__icon"></i>
               <span className="header-links__text">Projets</span>
             </NavLink>
           </li>
@@ -42,10 +42,10 @@ export default function Header() {
             <NavLink
               to="/skills"
               className={({ isActive }) =>
-                isActive ? 'header-links header-links__active' : 'header-links'
+                isActive ? 'header-links header-links--active' : 'header-links'
               }
             >
-              <i class="fa-solid fa-flask header-links__icon"></i>
+              <i className="fa-solid fa-flask header-links__icon"></i>
               <span className="header-links__text">Compétences</span>
             </NavLink>
           </li>
