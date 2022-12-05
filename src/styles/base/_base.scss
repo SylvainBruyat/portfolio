@@ -4,16 +4,8 @@
   box-sizing: border-box;
 }
 
-a {
-  text-decoration: none;
-}
-
-ul {
-  padding: 0;
-}
-
-li {
-  list-style: none;
+html {
+  font-size: 20px;
 }
 
 body {
@@ -23,14 +15,28 @@ body {
   color: white;
 }
 
+main {
+  max-width: 1200px;
+  margin: vars.$header-height auto 0 auto;
+  padding: 20px 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0.5rem 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
 h1 {
   color: vars.$color-tertiary;
   text-align: center;
-}
-
-main {
-  margin-top: vars.$header-height;
-  padding: 0 10px;
 }
 
 .text-emphasis {
