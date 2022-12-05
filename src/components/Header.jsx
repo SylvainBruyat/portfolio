@@ -23,7 +23,7 @@ export default function Header() {
                 isActive ? 'header-links header-links--active' : 'header-links'
               }
             >
-              <i className="fa-regular fa-address-card header-links__icon"></i>
+              <i className="fa-regular fa-id-card header-links__icon"></i>
               <span className="header-links__text">A propos</span>
             </NavLink>
           </li>
@@ -40,13 +40,13 @@ export default function Header() {
           </li>
           <li>
             <NavLink
-              to="/skills"
+              to="/contact"
               className={({ isActive }) =>
                 isActive ? 'header-links header-links--active' : 'header-links'
               }
             >
-              <i className="fa-solid fa-flask header-links__icon"></i>
-              <span className="header-links__text">Compétences</span>
+              <i className="fa-regular fa-envelope header-links__icon"></i>
+              <span className="header-links__text">Contact</span>
             </NavLink>
           </li>
         </ul>
