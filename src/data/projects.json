@@ -28,7 +28,7 @@
     "id": "formation-P4",
     "title": "La Panthère",
     "imageName": "panthere.webp",
-    "description": "Optimisation SEO d'un site web existant",
+    "description": "Amélioration du SEO d'un site web existant",
     "technos": [
       { "name": "HTML", "logo": "html-5.png" },
       { "name": "CSS", "logo": "css-3.png" }
