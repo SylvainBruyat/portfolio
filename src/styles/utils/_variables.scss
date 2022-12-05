@@ -21,3 +21,12 @@ $color-tertiary: #ff7f11; */
 $font-primary: 'Lato', 'sans-serif';
 
 $header-height: 100px;
+
+$number-of-homepage-project-pictures: 5;
+$picture-rotation-duration: 5s;
+$baseline-picture-rotation-delay: calc(
+  $picture-rotation-duration / $number-of-homepage-project-pictures
+);
+$initial-picture-rotation-angle: calc(
+  360 / $number-of-homepage-project-pictures
+);
