@@ -1,15 +1,21 @@
 @use '../utils/variables' as vars;
 
-.homepage {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1200px;
+@keyframes picture-rotation {
+  0% {
+    transform: rotate(0deg) translateX(85px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(85px) rotate(-360deg);
+  }
+}
 
+.homepage {
   &__h2 {
+    width: 50%;
     margin: 40px auto 20px auto;
     padding-top: 40px;
-    width: 50%;
     text-align: center;
+    color: vars.$color-tertiary;
     border-top: 1px solid vars.$color-tertiary;
   }
 
@@ -18,17 +24,66 @@
   }
 
   &__picture {
-    max-width: 200px;
-    max-height: 240px;
+    max-width: 250px;
+    max-height: 250px;
     border: 2px solid vars.$color-tertiary;
-    border-radius: 100px;
+    border-radius: 50%;
   }
 
   @media screen and (min-width: 768px) {
-    &__about div {
+    &__about__content,
+    &__projects__content {
       display: flex;
       justify-content: space-around;
       align-items: center;
     }
+
+    &__projects__content {
+      flex-direction: row-reverse;
+    }
+
+    & article {
+      width: 60%;
+    }
+  }
+
+  &__projects__content__pictures {
+    position: relative;
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    border-radius: 50%;
+    border: 2px solid vars.$color-tertiary;
+
+    &:hover .homepage__projects__picture {
+      animation-play-state: running;
+    }
+  }
+
+  &__projects__picture {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    animation: picture-rotation vars.$picture-rotation-duration linear infinite
+      paused;
+    @for $i from 1 through vars.$number-of-homepage-project-pictures {
+      &--#{$i} {
+        transform: rotate(
+            vars.$initial-picture-rotation-angle * ($i - 1) * 1deg
+          )
+          translateX(85px)
+          rotate(-(vars.$initial-picture-rotation-angle) * ($i - 1) * 1deg);
+        animation-delay: (
+          vars.$baseline-picture-rotation-delay -
+            vars.$baseline-picture-rotation-delay *
+            $i
+        );
+      }
+    }
+  }
+
+  &__skills-list {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
