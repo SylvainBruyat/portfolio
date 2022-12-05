@@ -1,0 +1,18 @@
+{
+  "hardSkills": [
+    { "name": "HTML", "image": "html-5.png" },
+    { "name": "CSS", "image": "css-3.png" },
+    { "name": "Sass", "image": "sass.png" },
+    { "name": "JavaScript", "image": "js.png" },
+    { "name": "React", "image": "react.png" },
+    { "name": "Node.js", "image": "nodejs.png" },
+    { "name": "MongoDB", "image": "mongodb.png" },
+    { "name": "Express.js", "image": "" },
+    { "name": "NoSQL", "image": "" },
+    { "name": "Git", "image": "" },
+    { "name": "Github", "image": "" },
+    { "name": "Figma", "image": "" },
+    { "name": "SEO", "image": "" }
+  ],
+  "softSkills": ["", "", "", "", "", "", "", "", "", ""]
+}
