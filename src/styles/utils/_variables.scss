@@ -5,6 +5,7 @@
 $color-primary: #34353a;
 $color-secondary: #62ac83;
 $color-tertiary: #ffffeb;
+$color-warning: #ec0000;
 
 /* $color-primary: #34353a;
 $color-secondary: #62ac83;
@@ -23,7 +24,7 @@ $font-primary: 'Lato', 'sans-serif';
 $header-height: 100px;
 
 $number-of-homepage-project-pictures: 5;
-$picture-rotation-duration: 5s;
+$picture-rotation-duration: 7s;
 $baseline-picture-rotation-delay: calc(
   $picture-rotation-duration / $number-of-homepage-project-pictures
 );
