@@ -1,65 +1,76 @@
 @use '../utils/variables' as vars;
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  height: vars.$header-height;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.header {
+  min-height: 100px;
+  padding-bottom: 20px;
   background-color: vars.$color-primary;
   border-bottom: 1px solid vars.$color-secondary;
-}
-
-.header-links-list {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 1.5rem;
-}
-
-.header-links {
-  display: inline-block;
-  position: relative;
-  margin: 0 15px;
-  padding-bottom: 5px;
-  color: vars.$color-secondary;
-  font-size: 1.2rem;
-  font-weight: bold;
-  border-bottom: 2px solid vars.$color-primary;
-  cursor: pointer;
-  transition: transform 0.1s linear;
-
-  &--active {
-    border-bottom: 2px solid vars.$color-tertiary;
-  }
-
-  &__icon {
-    font-size: 2rem;
-  }
 
   @media screen and (min-width: 768px) {
-    &__icon {
-      display: none;
-    }
-    &__text {
-      display: unset;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  @media screen and (max-width: 767px) {
-    &__icon {
-      display: unset;
-    }
-    &__text {
-      display: none;
-    }
+  &__h1 {
+    margin: 20px 10px;
+    color: vars.$color-tertiary;
+    font-size: 1.6rem;
+    text-align: center;
   }
 
-  &:hover:not(&--active) {
-    transform: scale(1.1);
+  &__nav {
+    width: fit-content;
+    margin-left: auto;
+  }
+
+  &__links-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.5rem;
+  }
+
+  &__links {
+    display: inline-block;
+    position: relative;
+    margin: 0 15px;
+    padding-bottom: 5px;
+    color: vars.$color-secondary;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: 2px solid vars.$color-primary;
+    cursor: pointer;
+    transition: transform 0.1s linear;
+
+    &--active {
+      border-bottom: 2px solid vars.$color-tertiary;
+    }
+
+    &__icon {
+      font-size: 2rem;
+    }
+
+    @media screen and (min-width: 768px) {
+      &__icon {
+        display: none;
+      }
+      &__text {
+        display: unset;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      &__icon {
+        display: unset;
+      }
+      &__text {
+        display: none;
+      }
+    }
+
+    &:hover:not(&--active) {
+      transform: scale(1.1);
+    }
   }
 }

@@ -10,10 +10,10 @@ import skills from '../data/skills.json';
 export default function Home() {
   return (
     <main className="homepage">
-      <h1>Sylvain Bruyat | Développeur Web Freelance</h1>
+      <h2>Bienvenue</h2>
 
       <section className="homepage__about">
-        <h2 className="homepage__h2">A propos</h2>
+        <h3 className="homepage__h3">A propos</h3>
         <div className="homepage__about__content">
           <p>
             <img
@@ -27,7 +27,7 @@ export default function Home() {
           <article>
             <p>
               Bonjour, je m'appelle{' '}
-              <span className="text-emphasis">Sylvain Bruyat</span>, je suis{' '}
+              <span className="text-emphasis">Sylvain</span>, je suis{' '}
               <span className="text-emphasis">développeur web freelance</span>.
             </p>
             <p>
@@ -36,7 +36,8 @@ export default function Home() {
               rajouter : « Encore une fois. ».
             </p>
             <p>
-              Envie d'<span className="text-emphasis">en savoir plus</span> ?
+              Envie d'
+              <span className="text-emphasis">en savoir plus</span> ?
             </p>
             <p>
               <ButtonLink href="/about" text="A propos" />
@@ -46,7 +47,7 @@ export default function Home() {
       </section>
 
       <section>
-        <h2 className="homepage__h2">Projets</h2>
+        <h3 className="homepage__h3">Projets</h3>
         <div className="homepage__projects__content">
           <div className="homepage__projects__content__pictures">
             <img
@@ -109,7 +110,7 @@ export default function Home() {
       </section>
 
       <section>
-        <h2 className="homepage__h2">Compétences</h2>
+        <h3 className="homepage__h3">Compétences</h3>
         <p>
           Je maîtrise évidemment <span className="text-emphasis">HTML 5</span>,{' '}
           <span className="text-emphasis">CSS 3</span> et{' '}
@@ -123,7 +124,7 @@ export default function Home() {
           <span className="text-emphasis">résolution de problèmes</span> durant
           mes 15 ans d'expérience professionnelle dans l'industrie aéronautique.
         </p>
-        <h3>Compétences techniques</h3>
+        <h4 className="homepage__h4">Compétences techniques</h4>
         <ul className="homepage__skills-list">
           {skills.hardSkills.map((skill) => (
             <Techno key={skill.name} name={skill.name} logo={skill.image} />

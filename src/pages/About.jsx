@@ -5,7 +5,7 @@ export default function About() {
    ******************************************************************************************/
   return (
     <main className="about">
-      <h1>A propos</h1>
+      <h2>A propos</h2>
       <p>
         Bonjour, je m'appelle{' '}
         <span className="text-emphasis text-emphasis">Sylvain</span>, je suis{' '}
@@ -16,7 +16,7 @@ export default function About() {
       </p>
       <section className="about__section about__section--tertiary-background">
         <div className="about__content about__content--aligned-left">
-          <h2 className="about__h2">La vie avant le web</h2>
+          <h3 className="about__h3">La vie avant le web</h3>
           <p>
             Phrase typique de freelance : « En 2021, j’ai tout plaqué pour
             changer de vie ! ». Et en ce qui me concerne, je pourrais presque
@@ -48,17 +48,17 @@ export default function About() {
       </section>
       <section className="about__section">
         <div className="about__content about__content--aligned-right">
-          <h2 className="about__h2">Deuxième H2</h2>
+          <h3 className="about__h3 about__h3--light">Soft skills</h3>
           <p>
             Ces aventures m’ont permis de{' '}
-            <span className="text-emphasis text-emphasis">
+            <span className="text-emphasis">
               développer beaucoup de compétences
             </span>{' '}
             très utiles, en particulier dans le développement web.
           </p>
           <p>
             Tout d’abord, il faut de bonnes{' '}
-            <span className="text-emphasis text-emphasis">
+            <span className="text-emphasis">
               capacités d’apprentissage, d’adaptation et d’intégration
             </span>{' '}
             pour vivre et travailler sur 3 continents différents en l’espace de
@@ -66,41 +66,31 @@ export default function About() {
           </p>
           <p>
             J’ai aussi développé mes capacités d’
-            <span className="text-emphasis text-emphasis">autonomie</span>, de{' '}
-            <span className="text-emphasis text-emphasis">
-              travail en équipe
-            </span>{' '}
-            et mon{' '}
-            <span className="text-emphasis text-emphasis">
-              sens des responsabilités
-            </span>
-            , notamment en codirigeant une équipe de 12 ingénieurs.
+            <span className="text-emphasis">autonomie</span>, de{' '}
+            <span className="text-emphasis">travail en équipe</span> et mon{' '}
+            <span className="text-emphasis">sens des responsabilités</span>,
+            notamment en codirigeant une équipe de 12 ingénieurs.
           </p>
           <p>
             Ensuite, ayant été sous-traitant de grands groupes industriels
             pendant 15 ans, j’ai toujours apporté une attention particulière au
             service et à la{' '}
-            <span className="text-emphasis text-emphasis">
-              satisfaction du client
-            </span>
-            . Et j’ai au fil du temps travaillé selon la plupart des méthodes
-            les plus courantes : scrum, agile, 5S, lean, etc.
+            <span className="text-emphasis">satisfaction du client</span>. Et
+            j’ai au fil du temps travaillé selon la plupart des méthodes les
+            plus courantes : scrum, agile, 5S, lean, etc.
           </p>
           <p>
             Enfin, les années passées à tester des moteurs d’avion et leurs
             logiciels font que les concepts de{' '}
-            <span className="text-emphasis text-emphasis">tests unitaires</span>{' '}
-            ou de{' '}
-            <span className="text-emphasis text-emphasis">
-              tests d’intégration
-            </span>{' '}
-            sont très familiers pour moi.
+            <span className="text-emphasis">tests unitaires</span> ou de{' '}
+            <span className="text-emphasis">tests d’intégration</span> sont très
+            familiers pour moi.
           </p>
         </div>
       </section>
       <section className="about__section about__section--tertiary-background">
         <div className="about__content about__content--aligned-left">
-          <h2 className="about__h2">Troisième H2</h2>
+          <h3 className="about__h3">Hard skills</h3>
           <p>
             Et puisqu’on parle de logiciels, parlons un peu technique. Le choix
             de devenir développeur web n’est pas dû au hasard.
@@ -144,12 +134,18 @@ export default function About() {
       </section>
       <section className="about__section about__section--aligned-right">
         <div className="about__content about__content--aligned-right">
-          <h2 className="about__h2">Quatrième H2</h2>
+          <h3 className="about__h3 about__h3--light">Et maintenant ?</h3>
           <p>
-            Après une formation chez OpenClassrooms, je suis maintenant prêt à
-            vous accompagner sur vos projets. Sensibilisé et formé aux enjeux du
-            numérique responsable (greenIT), je peux également vous aider à
-            maîtriser l’empreinte carbone de vos services et outils numériques.
+            Après une formation chez OpenClassrooms, je suis maintenant prêt à{' '}
+            <span className="text-emphasis">
+              vous accompagner sur vos projets
+            </span>
+            . Sensibilisé et formé aux enjeux du{' '}
+            <span className="text-emphasis">
+              numérique responsable (greenIT)
+            </span>
+            , je peux également vous aider à maîtriser l’empreinte carbone de
+            vos services et outils numériques.
           </p>
         </div>
       </section>

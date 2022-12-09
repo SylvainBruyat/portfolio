@@ -5,7 +5,7 @@ import projects from '../data/projects.json';
 export default function Projects() {
   return (
     <main>
-      <h1>Portfolio</h1>
+      <h2>Portfolio</h2>
       <section className="projects-wrapper">
         {projects.map((project) => (
           <ProjectCard

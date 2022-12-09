@@ -10,11 +10,12 @@
 }
 
 .homepage {
-  &__h2 {
+  &__h3 {
     width: 50%;
     margin: 40px auto 20px auto;
     padding-top: 40px;
     text-align: center;
+    font-size: 1.3rem;
     color: vars.$color-tertiary;
     border-top: 1px solid vars.$color-tertiary;
   }
@@ -80,6 +81,10 @@
         );
       }
     }
+  }
+
+  &__h4 {
+    margin-top: 2rem;
   }
 
   &__skills-list {

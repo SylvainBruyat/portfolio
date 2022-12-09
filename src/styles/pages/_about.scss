@@ -35,4 +35,13 @@
       }
     }
   }
+
+  &__h3 {
+    text-align: center;
+    color: vars.$color-primary;
+
+    &--light {
+      color: vars.$color-tertiary;
+    }
+  }
 }

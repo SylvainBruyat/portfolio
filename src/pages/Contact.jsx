@@ -30,7 +30,7 @@ export default function Contact() {
 
   return (
     <main className="contact">
-      <h1>Contact</h1>
+      <h2>Contact</h2>
       <form className="contact__form" ref={form} onSubmit={handleSubmit}>
         <div>
           <section className="contact__form__section">
