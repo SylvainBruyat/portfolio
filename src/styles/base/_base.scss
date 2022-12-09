@@ -2,6 +2,9 @@
 
 * {
   box-sizing: border-box;
+  &:focus-visible {
+    outline: 2px dotted vars.$color-tertiary;
+  }
 }
 
 html {
@@ -42,4 +45,8 @@ h1 {
 .text-emphasis {
   color: vars.$color-secondary;
   font-weight: bold;
+
+  &--dark {
+    color: vars.$color-secondary-dark;
+  }
 }

@@ -1,0 +1,38 @@
+@use '../utils/variables' as vars;
+
+.about {
+  max-width: unset;
+  padding: 0;
+
+  &__section {
+    padding: 0 10px;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--secondary-background {
+      color: vars.$color-primary;
+      background-color: vars.$color-secondary;
+    }
+
+    &--tertiary-background {
+      color: vars.$color-primary;
+      background-color: vars.$color-tertiary;
+    }
+  }
+
+  &__content {
+    @media screen and (min-width: 768px) {
+      width: 65%;
+
+      &--aligned-left {
+        align-self: flex-start;
+      }
+      &--aligned-right {
+        align-self: flex-end;
+      }
+    }
+  }
+}
