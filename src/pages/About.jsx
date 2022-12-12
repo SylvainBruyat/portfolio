@@ -1,22 +1,34 @@
+import ButtonLink from '../components/ButtonLink';
+
 export default function About() {
-  /*******************************************************************************************
-   * Reprendre la couleur des text-emphasis en faisant attention au contraste et remettre au *
-   * propre les variables et les classes *****************************************************
-   ******************************************************************************************/
   return (
     <main className="about">
-      <h2>A propos</h2>
-      <p>
-        Bonjour, je m'appelle{' '}
-        <span className="text-emphasis text-emphasis">Sylvain</span>, je suis{' '}
-        <span className="text-emphasis text-emphasis">
-          développeur web freelance
-        </span>
-        .
-      </p>
+      <h2>Quelques mots sur moi</h2>
+      <section className="about__section">
+        <p>
+          Hello, je m'appelle{' '}
+          <span className="text-emphasis text-emphasis">Sylvain</span> et je
+          suis{' '}
+          <span className="text-emphasis text-emphasis">
+            développeur web freelance
+          </span>
+          .
+        </p>
+      </section>
       <section className="about__section about__section--tertiary-background">
+        <figure className="about__image-wrapper">
+          <img
+            src={require('../assets/images/hublot.webp')}
+            alt="Vue du ciel à travers un hublot d'avion"
+            width="300px"
+            height="450px"
+          />
+          <figcaption className="about__image-caption">
+            Crédit : Sasha Freemind - Unsplash
+          </figcaption>
+        </figure>
         <div className="about__content about__content--aligned-left">
-          <h3 className="about__h3">La vie avant le web</h3>
+          <h3 className="about__h3">Ma vie avant le web</h3>
           <p>
             Phrase typique de freelance : « En 2021, j’ai tout plaqué pour
             changer de vie ! ». Et en ce qui me concerne, je pourrais presque
@@ -47,6 +59,17 @@ export default function About() {
         </div>
       </section>
       <section className="about__section">
+        <figure className="about__image-wrapper">
+          <img
+            src={require('../assets/images/teamwork.webp')}
+            alt="Une équipe d'aviron à 4 avec barreur"
+            width="300px"
+            height="450px"
+          />
+          <figcaption className="about__image-caption">
+            Crédit : Matteo Vistocco - Unsplash
+          </figcaption>
+        </figure>
         <div className="about__content about__content--aligned-right">
           <h3 className="about__h3 about__h3--light">Soft skills</h3>
           <p>
@@ -57,7 +80,7 @@ export default function About() {
             très utiles, en particulier dans le développement web.
           </p>
           <p>
-            Tout d’abord, il faut de bonnes{' '}
+            Tout d’abord, il faut de solides{' '}
             <span className="text-emphasis">
               capacités d’apprentissage, d’adaptation et d’intégration
             </span>{' '}
@@ -89,6 +112,17 @@ export default function About() {
         </div>
       </section>
       <section className="about__section about__section--tertiary-background">
+        <figure className="about__image-wrapper">
+          <img
+            src={require('../assets/images/hard-skills.webp')}
+            alt="Ordinateur portable et écran affichant du code"
+            width="300px"
+            height="450px"
+          />
+          <figcaption className="about__image-caption">
+            Crédit : Safar Safarov - Unsplash
+          </figcaption>
+        </figure>
         <div className="about__content about__content--aligned-left">
           <h3 className="about__h3">Hard skills</h3>
           <p>
@@ -133,19 +167,42 @@ export default function About() {
         </div>
       </section>
       <section className="about__section about__section--aligned-right">
+        <figure className="about__image-wrapper">
+          <img
+            src={require('../assets/images/collaboration.webp')}
+            alt="Deux personnes autour d'une table se serrant la main"
+            width="300px"
+            height="450px"
+          />
+          <figcaption className="about__image-caption">
+            Crédit : fauxels - Pexels
+          </figcaption>
+        </figure>
         <div className="about__content about__content--aligned-right">
           <h3 className="about__h3 about__h3--light">Et maintenant ?</h3>
           <p>
-            Après une formation chez OpenClassrooms, je suis maintenant prêt à{' '}
+            Vous avez besoin d'un site vitrine ? Vous souhaitez offrir à vos
+            clients la possibilité de créer un compte sur votre site
+            d'e-commerce ? Votre équipe de développeurs a besoin de renfort ?
+          </p>
+          <p>
+            Ne cherchez pas plus loin. Je peux{' '}
             <span className="text-emphasis">
               vous accompagner sur vos projets
             </span>
             . Sensibilisé et formé aux enjeux du{' '}
-            <span className="text-emphasis">
-              numérique responsable (greenIT)
-            </span>
-            , je peux également vous aider à maîtriser l’empreinte carbone de
-            vos services et outils numériques.
+            <span className="text-emphasis">numérique responsable</span>{' '}
+            (greenIT), je peux également vous aider à maîtriser l’empreinte
+            carbone de vos services et outils web.
+          </p>
+          <p>
+            {/**********************
+             *** Insérer un lien ***
+             ***********************/}
+            Rendez-vous sur la page Contact pour qu'on parle de votre projet !
+          </p>
+          <p className="about__link-wrapper">
+            <ButtonLink href="/contact" text="Contact" />
           </p>
         </div>
       </section>
