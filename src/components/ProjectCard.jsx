@@ -1,7 +1,3 @@
-/* A mettre dans les cartes :
-- liens github et site
-*/
-
 import Techno from './Techno';
 
 export default function ProjectCard({
@@ -14,7 +10,7 @@ export default function ProjectCard({
 }) {
   return (
     <div className="project-card">
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <div className="project-card__image-wrapper">
         <img
           className="project-card__image"
@@ -33,7 +29,9 @@ export default function ProjectCard({
         </ul>
         <div className="project-card__link-list">
           <button className="project-card__button">
-            {/* Enlever les boutons autour des liens et styliser les liens comme des boutons */}
+            {/********************************************************************************
+             *  Enlever les boutons autour des liens et styliser les liens comme des boutons *
+             ********************************************************************************/}
             <a href={githubLink} className="project-card__link">
               Voir le code sur Github
             </a>
