@@ -16,17 +16,15 @@ export default function About() {
         </p>
       </section>
       <section className="about__section about__section--tertiary-background">
-        <figure className="about__image-wrapper">
+        <p className="about__image-wrapper">
           <img
             src={require('../assets/images/hublot.webp')}
             alt="Vue du ciel à travers un hublot d'avion"
+            title="Crédit : Sasha Freemind - Unsplash"
             width="300px"
             height="450px"
           />
-          <figcaption className="about__image-caption">
-            Crédit : Sasha Freemind - Unsplash
-          </figcaption>
-        </figure>
+        </p>
         <div className="about__content about__content--aligned-left">
           <h3 className="about__h3">Ma vie avant le web</h3>
           <p>
@@ -59,17 +57,15 @@ export default function About() {
         </div>
       </section>
       <section className="about__section">
-        <figure className="about__image-wrapper">
+        <p className="about__image-wrapper">
           <img
             src={require('../assets/images/teamwork.webp')}
             alt="Une équipe d'aviron à 4 avec barreur"
+            title="Crédit : Matteo Vistocco - Unsplash"
             width="300px"
             height="450px"
           />
-          <figcaption className="about__image-caption">
-            Crédit : Matteo Vistocco - Unsplash
-          </figcaption>
-        </figure>
+        </p>
         <div className="about__content about__content--aligned-right">
           <h3 className="about__h3 about__h3--light">Soft skills</h3>
           <p>
@@ -112,17 +108,15 @@ export default function About() {
         </div>
       </section>
       <section className="about__section about__section--tertiary-background">
-        <figure className="about__image-wrapper">
+        <p className="about__image-wrapper">
           <img
             src={require('../assets/images/hard-skills.webp')}
             alt="Ordinateur portable et écran affichant du code"
+            title="Crédit : Safar Safarov - Unsplash"
             width="300px"
             height="450px"
           />
-          <figcaption className="about__image-caption">
-            Crédit : Safar Safarov - Unsplash
-          </figcaption>
-        </figure>
+        </p>
         <div className="about__content about__content--aligned-left">
           <h3 className="about__h3">Hard skills</h3>
           <p>
@@ -167,17 +161,15 @@ export default function About() {
         </div>
       </section>
       <section className="about__section about__section--aligned-right">
-        <figure className="about__image-wrapper">
+        <p className="about__image-wrapper">
           <img
             src={require('../assets/images/collaboration.webp')}
             alt="Deux personnes autour d'une table se serrant la main"
+            title="Crédit : fauxels - Pexels"
             width="300px"
             height="450px"
           />
-          <figcaption className="about__image-caption">
-            Crédit : fauxels - Pexels
-          </figcaption>
-        </figure>
+        </p>
         <div className="about__content about__content--aligned-right">
           <h3 className="about__h3 about__h3--light">Et maintenant ?</h3>
           <p>
