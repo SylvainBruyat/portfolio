@@ -1,9 +1,11 @@
 @use '../utils/variables' as vars;
 
 .contact {
+  padding-bottom: 20px;
+
   &__form {
     max-width: 800px;
-    margin: auto;
+    margin: 40px auto 0 auto;
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
@@ -24,18 +26,55 @@
       flex-direction: column;
     }
 
+    &__message {
+      max-width: 100%;
+    }
+
+    &__message-indications {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__message-length {
+      margin: 0.1rem 0 0.5rem 0;
+      font-size: 0.6rem;
+    }
+
     &__submit {
-      width: 100%;
+      /* width: 100%;
       max-width: 150px;
-      height: 2rem;
-      font-size: 1rem;
+      height: 2rem; */
       margin: auto;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      color: vars.$color-primary;
+      background-color: vars.$color-tertiary;
+      border: 2px solid vars.$color-secondary;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s linear;
+
+      &:hover {
+        font-weight: bold;
+        background-color: vars.$color-secondary;
+        border: 2px solid vars.$color-tertiary;
+      }
     }
   }
 }
 
+.in-sentence-link {
+  color: vars.$color-tertiary;
+  text-decoration: underline;
+}
+
+.fa-arrow-up-right-from-square {
+  font-size: 0.5rem;
+}
+
 .error-message {
-  height: 20px;
+  min-height: 20px;
   width: fit-content;
   margin: 0.1rem 0 0.5rem 0;
   font-size: 0.8rem;
@@ -45,5 +84,5 @@
 }
 
 :is(input, textarea):not(:focus):not(:placeholder-shown):invalid {
-  border: 1px solid red;
+  border: 1px solid vars.$color-warning;
 }
