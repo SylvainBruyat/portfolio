@@ -158,6 +158,47 @@ export default function About() {
             Même si les langages utilisés sont différents, les concepts sont
             similaires. Donc l’adaptation a été relativement simple.
           </p>
+          <p>
+            Je maîtrise bien sûr les bases du web :{' '}
+            <span className="text-emphasis text-emphasis--dark">
+              HTML, CSS et JavaScript
+            </span>
+            , mais également{' '}
+            <span className="text-emphasis text-emphasis--dark">Sass</span> et
+            la{' '}
+            <span className="text-emphasis text-emphasis--dark">
+              stack MERN : MongoDB, Express, React et Node.js
+            </span>
+            .
+          </p>
+          <p>
+            TypeScript, PHP et SQL viendront très bientôt s'ajouter à la liste.
+          </p>
+          <p>
+            <span className="text-emphasis text-emphasis--dark">
+              Vous utilisez d'autres technos ?
+            </span>{' '}
+            Pas de problème,{' '}
+            <span className="text-emphasis text-emphasis--dark">
+              je peux m'adapter{' '}
+            </span>
+            et par exemple apprendre un nouveau framework selon vos besoins.
+          </p>
+          <p>
+            Pour compléter cela, j'utilise évidemment{' '}
+            <span className="text-emphasis text-emphasis--dark">Git</span> (et{' '}
+            <span className="text-emphasis text-emphasis--dark">Github</span>)
+            et je porte une attention particulière à l'
+            <span className="text-emphasis text-emphasis--dark">
+              accessibilité
+            </span>{' '}
+            , à la{' '}
+            <span className="text-emphasis text-emphasis--dark">
+              performance
+            </span>{' '}
+            et au <span className="text-emphasis text-emphasis--dark">SEO</span>{' '}
+            sur tous mes projets.
+          </p>
         </div>
       </section>
       <section className="about__section about__section--aligned-right">
