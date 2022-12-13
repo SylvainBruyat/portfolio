@@ -18,7 +18,7 @@ export default function Home() {
           <p>
             <img
               src={require('../assets/images/sylvain-bruyat.webp')}
-              alt="Sylvain Bruyat"
+              alt="Portrait de Sylvain Bruyat"
               width="250px"
               height="250px"
               className="homepage__picture"
@@ -26,8 +26,8 @@ export default function Home() {
           </p>
           <article>
             <p>
-              Bonjour, je m'appelle{' '}
-              <span className="text-emphasis">Sylvain</span>, je suis{' '}
+              Hello, je m'appelle <span className="text-emphasis">Sylvain</span>{' '}
+              et je suis{' '}
               <span className="text-emphasis">développeur web freelance</span>.
             </p>
             <p>
@@ -52,35 +52,35 @@ export default function Home() {
           <div className="homepage__projects__content__pictures">
             <img
               src={require('../assets/images/booki.webp')}
-              alt="Capture d'écran du projet Booki"
+              alt="Capture d'écran du site web Booki"
               height="50px"
               width="50px"
               className="homepage__projects__picture homepage__projects__picture--1"
             ></img>
             <img
               src={require('../assets/images/ohmyfood.webp')}
-              alt="Capture d'écran du projet Kanap"
+              alt="Capture d'écran du site web Ohmyfood"
               height="50px"
               width="50px"
               className="homepage__projects__picture homepage__projects__picture--2"
             ></img>
             <img
               src={require('../assets/images/kanap.webp')}
-              alt="Capture d'écran du projet Kanap"
+              alt="Capture d'écran du site web Kanap"
               height="50px"
               width="50px"
               className="homepage__projects__picture homepage__projects__picture--3"
             ></img>
             <img
               src={require('../assets/images/groupomania.webp')}
-              alt="Capture d'écran du projet Kanap"
+              alt="Capture d'écran du site web Groupomania"
               height="50px"
               width="50px"
               className="homepage__projects__picture homepage__projects__picture--4"
             ></img>
             <img
               src={require('../assets/images/portfolio.webp')}
-              alt="Capture d'écran du projet Kanap"
+              alt="Capture d'écran du site web portfolio"
               height="50px"
               width="50px"
               className="homepage__projects__picture homepage__projects__picture--5"
@@ -130,6 +130,13 @@ export default function Home() {
             <Techno key={skill.name} name={skill.name} logo={skill.image} />
           ))}
         </ul>
+      </section>
+      <section>
+        <h3 className="homepage__h3">Me contacter</h3>
+        <p></p>
+        <p>
+          <ButtonLink href="/contact" text="Contact" />
+        </p>
       </section>
     </main>
   );
