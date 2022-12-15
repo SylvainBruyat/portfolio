@@ -1,0 +1,55 @@
+@use '../utils/variables' as vars;
+
+.hero-button-link {
+  max-width: 230px;
+  height: fit-content;
+  margin: 20px;
+  padding: 10px 20px;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  //background-color: vars.$color-tertiary;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.15s ease-out, background-color 0.2s linear;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &--primary {
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 20%;
+      left: 6%;
+    }
+    color: vars.$color-tertiary;
+    background-color: vars.$color-cta;
+    border: 2px solid vars.$color-tertiary;
+
+    &:hover {
+      color: vars.$color-tertiary;
+      background-color: vars.$color-secondary-dark;
+      border: 2px solid vars.$color-tertiary;
+    }
+  }
+
+  &--secondary {
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      bottom: 20%;
+      right: 6%;
+    }
+    color: vars.$color-cta;
+    background-color: vars.$color-tertiary;
+    border: 2px solid vars.$color-cta;
+
+    &:hover {
+      color: vars.$color-secondary-dark;
+      background-color: vars.$color-tertiary;
+      border: 2px solid vars.$color-secondary-dark;
+    }
+  }
+}

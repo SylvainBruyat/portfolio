@@ -5,15 +5,16 @@
 @use './base/base';
 
 @use './components/buttonLink';
-@use './components/techno';
-@use './components/header';
 @use './components/footer';
+@use './components/header';
+@use './components/heroButtonLink';
 @use './components/projectCard';
+@use './components/techno';
 
 // layouts
 
-@use './pages/home';
 @use './pages/about';
-@use './pages/projects';
 @use './pages/contact';
+@use './pages/home';
 @use './pages/notFound';
+@use './pages/projects';
