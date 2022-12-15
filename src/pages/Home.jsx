@@ -70,36 +70,36 @@ export default function Home() {
               <img
                 src={require('../assets/images/booki.webp')}
                 alt="Capture d'écran du site web Booki"
+                width="100px"
                 height="50px"
-                width="50px"
                 className="homepage__projects__picture homepage__projects__picture--1"
               ></img>
               <img
                 src={require('../assets/images/ohmyfood.webp')}
                 alt="Capture d'écran du site web Ohmyfood"
+                width="100px"
                 height="50px"
-                width="50px"
                 className="homepage__projects__picture homepage__projects__picture--2"
               ></img>
               <img
                 src={require('../assets/images/kanap.webp')}
                 alt="Capture d'écran du site web Kanap"
+                width="100px"
                 height="50px"
-                width="50px"
                 className="homepage__projects__picture homepage__projects__picture--3"
               ></img>
               <img
                 src={require('../assets/images/groupomania.webp')}
                 alt="Capture d'écran du site web Groupomania"
+                width="100px"
                 height="50px"
-                width="50px"
                 className="homepage__projects__picture homepage__projects__picture--4"
               ></img>
               <img
                 src={require('../assets/images/portfolio.webp')}
                 alt="Capture d'écran du site web portfolio"
+                width="100px"
                 height="50px"
-                width="50px"
                 className="homepage__projects__picture homepage__projects__picture--5"
               ></img>
             </div>
@@ -151,7 +151,19 @@ export default function Home() {
         </section>
         <section>
           <h3 className="homepage__h3">Me contacter</h3>
-          <p></p>
+          <p>
+            Vous avez{' '}
+            <span className="text-emphasis">
+              besoin d'un développeur freelance
+            </span>{' '}
+            pour votre projet front end en React ? Vous cherchez un renfort sur
+            du back end Node.js ? Vous souhaitez quelqu'un d'opérationnel
+            immédiatement ?
+          </p>
+          <p>
+            <span className="text-emphasis">Contactez-moi</span> pour que nous
+            discutions de votre besoin et de l'aide que je peux vous apporter.
+          </p>
           <p className="homepage__button-wrapper">
             <ButtonLink href="/contact" text="Contact" />
           </p>

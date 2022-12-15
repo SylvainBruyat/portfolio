@@ -2,10 +2,10 @@
 
 @keyframes picture-rotation {
   0% {
-    transform: rotate(0deg) translateX(85px) rotate(0deg);
+    transform: rotate(0deg) translateX(90px) rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translateX(85px) rotate(-360deg);
+    transform: rotate(360deg) translateX(90px) rotate(-360deg);
   }
 }
 
@@ -99,8 +99,8 @@
 
   &__projects__content__pictures {
     position: relative;
-    height: 250px;
-    width: 250px;
+    height: 300px;
+    width: 300px;
     margin: auto;
     border-radius: 50%;
     border: 2px solid vars.$color-tertiary;
@@ -112,16 +112,17 @@
 
   &__projects__picture {
     position: absolute;
-    top: 100px;
-    left: 100px;
+    top: 125px;
+    left: 98px;
     animation: picture-rotation vars.$picture-rotation-duration linear infinite
       paused;
+
     @for $i from 1 through vars.$number-of-homepage-project-pictures {
       &--#{$i} {
         transform: rotate(
             vars.$initial-picture-rotation-angle * ($i - 1) * 1deg
           )
-          translateX(85px)
+          translateX(90px)
           rotate(-(vars.$initial-picture-rotation-angle) * ($i - 1) * 1deg);
         animation-delay: (
           vars.$baseline-picture-rotation-delay -
