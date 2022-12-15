@@ -7,21 +7,29 @@
   &__section {
     padding: 5px 20px 0 20px;
 
-    @media screen and (min-width: 768px) {
-      display: flex;
-      align-items: center;
-    }
-
     &--secondary-background {
-      flex-direction: row;
       color: vars.$color-primary;
       background-color: vars.$color-secondary;
     }
 
     &--tertiary-background {
-      flex-direction: row-reverse;
       color: vars.$color-primary;
       background-color: vars.$color-tertiary;
+    }
+  }
+
+  &__width-limiter {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+
+      &--reverse-flow {
+        flex-direction: row-reverse;
+      }
     }
   }
 
