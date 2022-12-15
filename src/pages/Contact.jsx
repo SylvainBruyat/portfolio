@@ -169,7 +169,7 @@ export default function Contact() {
                 type="text"
                 id="first-name"
                 name="first-name"
-                placeholder=""
+                placeholder="Prénom"
                 required
               />
             </div>
@@ -182,7 +182,7 @@ export default function Contact() {
                 type="text"
                 id="last-name"
                 name="last-name"
-                placeholder=""
+                placeholder="Nom"
                 required
               />
             </div>
