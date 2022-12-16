@@ -1,7 +1,5 @@
 @use './normalize.css';
 
-// utils;
-
 @use './base/base';
 
 @use './components/buttonLink';
@@ -10,8 +8,6 @@
 @use './components/heroButtonLink';
 @use './components/projectCard';
 @use './components/techno';
-
-// layouts
 
 @use './pages/about';
 @use './pages/contact';
