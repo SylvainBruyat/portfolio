@@ -31,7 +31,7 @@
 
     &:hover {
       color: vars.$color-tertiary;
-      background-color: vars.$color-secondary-dark;
+      background-color: vars.$color-secondary--dark;
       border: 2px solid vars.$color-tertiary;
     }
   }
@@ -48,9 +48,9 @@
     }
 
     &:hover {
-      color: vars.$color-secondary-dark;
+      color: vars.$color-secondary--dark;
       background-color: vars.$color-tertiary;
-      border: 2px solid vars.$color-secondary-dark;
+      border: 2px solid vars.$color-secondary--dark;
     }
   }
 }

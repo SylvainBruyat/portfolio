@@ -21,7 +21,11 @@
     /***************************************************
      ************* Ajouter le crédit photo *************
      ***************************************************/
-    background: linear-gradient(#34353abb, #34353abb) top / 100% 25% no-repeat,
+    background: linear-gradient(
+          vars.$color-primary--translucent,
+          vars.$color-primary--translucent
+        )
+        top / 100% 25% no-repeat,
       url('../../assets/images/hero-photo.webp') center / cover no-repeat;
     color: vars.$color-tertiary;
 
