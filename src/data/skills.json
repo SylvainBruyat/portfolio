@@ -14,5 +14,14 @@
     { "name": "Figma", "image": "" },
     { "name": "SEO", "image": "" }
   ],
-  "softSkills": ["", "", "", "", "", "", "", "", "", ""]
+  "softSkills": [
+    { "name": "Autonomie", "image": "" },
+    { "name": "Travail d'équipe", "image": "" },
+    { "name": "Communication opérationnelle", "image": "" },
+    { "name": "Résolution de problèmes", "image": "" },
+    { "name": "Adaptation", "image": "" },
+    { "name": "Sens des responsabilités", "image": "" },
+    { "name": "Sérieux", "image": "" },
+    { "name": "Fiabilité", "image": "" }
+  ]
 }

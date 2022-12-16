@@ -142,12 +142,32 @@ export default function Home() {
             durant mes 15 ans d'expérience professionnelle dans l'industrie
             aéronautique.
           </p>
-          <h4 className="homepage__h4">Compétences techniques</h4>
-          <ul className="homepage__skills-list">
-            {skills.hardSkills.map((skill) => (
-              <Techno key={skill.name} name={skill.name} logo={skill.image} />
-            ))}
-          </ul>
+          <div className="homepage__skills">
+            <div className="homepage__skills__hard">
+              <h4 className="homepage__h4">Compétences techniques</h4>
+              <ul className="homepage__skills-list">
+                {skills.hardSkills.map((skill) => (
+                  <Techno
+                    key={skill.name}
+                    name={skill.name}
+                    logo={skill.image}
+                  />
+                ))}
+              </ul>
+            </div>
+            <div className="homepage__skills__soft">
+              <h4 className="homepage__h4">Compétences personnelles</h4>
+              <ul className="homepage__skills-list">
+                {skills.softSkills.map((skill) => (
+                  <Techno
+                    key={skill.name}
+                    name={skill.name}
+                    logo={skill.image}
+                  />
+                ))}
+              </ul>
+            </div>
+          </div>
         </section>
         <section>
           <h3 className="homepage__h3">Me contacter</h3>

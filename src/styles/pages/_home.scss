@@ -133,12 +133,29 @@
     }
   }
 
+  &__skills {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      column-gap: 50px;
+    }
+
+    &__hard,
+    &__soft {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-grow: 1;
+      min-width: calc(50% - 25px);
+    }
+  }
+
   &__h4 {
-    margin-top: 2rem;
+    margin: 2rem 0 0.5rem 0;
   }
 
   &__skills-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
