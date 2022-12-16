@@ -242,9 +242,6 @@ export default function About() {
               carbone de vos services et outils web.
             </p>
             <p>
-              {/**********************
-               *** Insérer un lien ***
-               ***********************/}
               Rendez-vous sur la page Contact pour qu'on parle de votre projet !
             </p>
             <p className="about__link-wrapper">

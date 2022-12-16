@@ -1,4 +1,3 @@
-/* Créer une page erreur 404 avec renvoi vers la page d'accueil */
 import ButtonLink from '../components/ButtonLink';
 
 export default function NotFound() {
