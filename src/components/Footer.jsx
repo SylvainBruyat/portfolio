@@ -1,10 +1,3 @@
-/* A mettre dans le footer :
-Liens vers mes réseaux et sites :
-  - LinkedIn
-  - Github
-  - ... (Codewars ou autre si pertinent)
-*/
-
 export default function Footer() {
   return (
     <footer className="footer">
