@@ -48,6 +48,7 @@
   &__techno-list {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   &__link-list {
@@ -56,29 +57,37 @@
     justify-content: space-between;
   }
 
-  &__button {
+  &__link {
     max-width: 45%;
+    margin: 0;
     padding: 5px;
+    display: flex;
+    align-items: center;
+    font-size: 0.7rem;
+    text-align: center;
+    color: vars.$color-tertiary;
     background-color: vars.$color-primary;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s 0.05s ease-in;
+    transition: background-color 0.2s 0.05s ease-in, color 0.15s 0.05s linear;
 
     & p {
       margin: 0;
+      text-align: center;
     }
 
-    &:hover {
+    &:hover:not(.no-link),
+    &:focus-visible {
       background-color: vars.$color-tertiary;
+      color: vars.$color-primary;
     }
-    &:hover .project-card__link {
+
+    &:hover p {
       color: vars.$color-primary;
     }
   }
+}
 
-  &__link {
-    color: vars.$color-tertiary;
-    transition: color 0.15s 0.05s linear;
-  }
+.no-link {
+  cursor: unset;
 }

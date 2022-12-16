@@ -28,23 +28,17 @@ export default function ProjectCard({
           ))}
         </ul>
         <div className="project-card__link-list">
-          <button className="project-card__button">
-            {/********************************************************************************
-             *  Enlever les boutons autour des liens et styliser les liens comme des boutons *
-             ********************************************************************************/}
-            <a href={githubLink} className="project-card__link">
-              Voir le code sur Github
+          <a href={githubLink} className="project-card__link">
+            <p>Voir le code sur Github</p>
+          </a>
+
+          {projectLink === '' ? (
+            <p className="project-card__link no-link">Bientôt en ligne</p>
+          ) : (
+            <a href={projectLink} className="project-card__link">
+              <p>Accéder au site</p>
             </a>
-          </button>
-          <button className="project-card__button">
-            {projectLink === '' ? (
-              <p className="project-card__link">Bientôt en ligne</p>
-            ) : (
-              <a href={projectLink} className="project-card__link">
-                Accéder au site
-              </a>
-            )}
-          </button>
+          )}
         </div>
       </div>
     </div>
