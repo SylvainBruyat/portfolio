@@ -56,3 +56,44 @@
     border: 2px solid vars.$color-tertiary;
   }
 }
+
+.hero-button {
+  max-width: 230px;
+  height: fit-content;
+  margin: 20px;
+  font-size: 1.5rem;
+
+  &--primary {
+    color: vars.$color-tertiary;
+    background-color: vars.$color-cta;
+    border: 2px solid vars.$color-tertiary;
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 20%;
+      left: 6%;
+    }
+
+    &:hover {
+      color: vars.$color-tertiary;
+      background-color: vars.$color-secondary--dark;
+    }
+  }
+
+  &--secondary {
+    color: vars.$color-cta;
+    border: 2px solid vars.$color-cta;
+
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      bottom: 20%;
+      right: 6%;
+    }
+
+    &:hover {
+      color: vars.$color-secondary--dark;
+      background-color: vars.$color-tertiary;
+      border: 2px solid vars.$color-secondary--dark;
+    }
+  }
+}

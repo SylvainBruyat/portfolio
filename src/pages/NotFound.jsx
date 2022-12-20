@@ -9,7 +9,12 @@ export default function NotFound() {
         pour l'instant.
       </p>
       <p>
-        <ButtonLink href="/" text="Retour à la page d'accueil" />
+        <ButtonLink
+          href="/"
+          text="Retour à la page d'accueil"
+          listOfClasses="button-link"
+          includeArrow={true}
+        />
       </p>
     </main>
   );

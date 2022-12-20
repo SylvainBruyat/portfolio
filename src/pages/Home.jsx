@@ -1,5 +1,4 @@
 import ButtonLink from '../components/ButtonLink';
-import HeroButtonLink from '../components/HeroButtonLink';
 import Techno from '../components/Techno';
 
 import skills from '../data/skills.json';
@@ -15,15 +14,17 @@ export default function Home() {
           en full remote.
         </p>
         <div className="homepage__hero__cta">
-          <HeroButtonLink
+          <ButtonLink
             href="/contact"
             text="Me contacter"
-            secondClass="hero-button-link--primary"
+            listOfClasses="button-link hero-button hero-button--primary"
+            includeArrow={false}
           />
-          <HeroButtonLink
+          <ButtonLink
             href="/about"
             text="En savoir plus"
-            secondClass="hero-button-link--secondary"
+            listOfClasses="button-link hero-button hero-button--secondary"
+            includeArrow={false}
           />
         </div>
       </section>
@@ -57,7 +58,12 @@ export default function Home() {
                 <span className="text-emphasis">en savoir plus</span> ?
               </p>
               <p className="homepage__button-wrapper">
-                <ButtonLink href="/about" text="A propos" />
+                <ButtonLink
+                  href="/about"
+                  text="A propos"
+                  listOfClasses="button-link"
+                  includeArrow={true}
+                />
               </p>
             </article>
           </div>
@@ -120,7 +126,12 @@ export default function Home() {
                 avec et pour vous.
               </p>
               <p className="homepage__button-wrapper">
-                <ButtonLink href="/projects" text="Portfolio" />
+                <ButtonLink
+                  href="/projects"
+                  text="Portfolio"
+                  listOfClasses="button-link"
+                  includeArrow={true}
+                />
               </p>
             </article>
           </div>
@@ -185,7 +196,12 @@ export default function Home() {
             discutions de votre besoin et de l'aide que je peux vous apporter.
           </p>
           <p className="homepage__button-wrapper">
-            <ButtonLink href="/contact" text="Contact" />
+            <ButtonLink
+              href="/contact"
+              text="Contact"
+              listOfClasses="button-link"
+              includeArrow={true}
+            />
           </p>
         </section>
       </div>

@@ -245,7 +245,12 @@ export default function About() {
               Rendez-vous sur la page Contact pour qu'on parle de votre projet !
             </p>
             <p className="about__link-wrapper">
-              <ButtonLink href="/contact" text="Contact" />
+              <ButtonLink
+                href="/contact"
+                text="Contact"
+                listOfClasses="button-link"
+                includeArrow={true}
+              />
             </p>
           </div>
         </div>
