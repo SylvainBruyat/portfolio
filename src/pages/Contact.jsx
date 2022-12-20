@@ -79,17 +79,15 @@ export default function Contact() {
 
   async function handleSubmit(evt) {
     evt.preventDefault();
-    try {
-      setIsSending(true);
-      await sendEmail(contactForm.current);
+    setIsSending(true);
+    const response = await sendEmail(contactForm.current);
+    if (response.status === 200) {
       emptyContactForm();
       displayEmailConfirmationMessage();
-    } catch (error) {
-      console.log({ error });
+    } else {
       displayEmailSendingErrorMessage();
-    } finally {
-      setIsSending(false);
     }
+    setIsSending(false);
   }
 
   useEffect(() => {

@@ -1,13 +1,18 @@
 import emailjs from '@emailjs/browser';
 
 export async function sendEmail(form) {
-  const response = await emailjs.sendForm(
-    process.env.REACT_APP_EMAIL_SERVICE,
-    process.env.REACT_APP_EMAIL_TEMPLATE,
-    form,
-    process.env.REACT_APP_EMAIL_PUBLIC_KEY
-  );
-  return response;
+  try {
+    const response = await emailjs.sendForm(
+      process.env.REACT_APP_EMAIL_SERVICE,
+      process.env.REACT_APP_EMAIL_TEMPLATE,
+      form,
+      process.env.REACT_APP_EMAIL_PUBLIC_KEY
+    );
+    return response;
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
 }
 
 export function validateFirstName(firstName) {
