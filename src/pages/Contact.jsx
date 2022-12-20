@@ -1,4 +1,4 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 import {
   sendEmail,
   validateFirstName,
@@ -9,78 +9,48 @@ import {
 } from '../services/contact-form-functions';
 
 export default function Contact() {
-  const form = useRef();
-  /*******************************************************************************************
-   * Reste à afficher un message pendant l'envoi puis un message de confirmation ou d'erreur *
-   * et à faire la validation des entrées avec message d'erreur sur chaque champ *************
-   ******************************************************************************************/
+  const [isSending, setIsSending] = useState(false);
+
+  const contactForm = useRef(null);
+  const emailConfirmationDialog = useRef(null);
+  const emailSendingErrorDialog = useRef(null);
+
+  /****************************************************************************
+   ** Reste à afficher le message de confirmation ou d'erreur dynamiquement ***
+   ** selon la réponse à l'envoi **********************************************
+   ****************************************************************************/
 
   const maximumMessageLength = 3000;
   const minimumMessageLength = 50;
 
   const verifyFirstName = (evt) => {
-    const firstName = evt.target.value;
-    if (firstName === '') {
-      document.getElementById('error-message--first-name').textContent = '';
-      return;
-    }
-    const isFirstNameValid = validateFirstName(firstName);
-    if (isFirstNameValid === false)
-      document.getElementById('error-message--first-name').textContent =
-        'Votre prénom doit être uniquement composé de lettres, espaces et tirets et comporter au moins 2 caractères.';
-    else document.getElementById('error-message--first-name').textContent = '';
+    const firstNameFeedbackMessage = validateFirstName(evt.target.value);
+    document.getElementById('error-message--first-name').textContent =
+      firstNameFeedbackMessage;
   };
 
   const verifyLastName = (evt) => {
-    const lastName = evt.target.value;
-    if (lastName === '') {
-      document.getElementById('error-message--last-name').textContent = '';
-      return;
-    }
-    const isLastNameValid = validateLastName(lastName);
-    if (isLastNameValid === false)
-      document.getElementById('error-message--last-name').textContent =
-        'Votre nom doit être uniquement composé de lettres, espaces, tirets et apostrophes et comporter au moins 2 caractères.';
-    else document.getElementById('error-message--last-name').textContent = '';
+    const lastNameFeedbackMessage = validateLastName(evt.target.value);
+    document.getElementById('error-message--last-name').textContent =
+      lastNameFeedbackMessage;
   };
 
   const verifyEmail = (evt) => {
-    const email = evt.target.value;
-    if (email === '') {
-      document.getElementById('error-message--email').textContent = '';
-      return;
-    }
-    const isEmailValid = validateEmail(email);
-    if (isEmailValid === false)
-      document.getElementById('error-message--email').textContent =
-        'Veuillez saisir une adresse email valide (format attendu : exemple@mail.com)';
-    else document.getElementById('error-message--email').textContent = '';
+    const emailFeedbackMessage = validateEmail(evt.target.value);
+    document.getElementById('error-message--email').textContent =
+      emailFeedbackMessage;
   };
 
   const verifyPhoneNumber = (evt) => {
-    const phoneNumber = evt.target.value;
-    if (phoneNumber === '') {
-      document.getElementById('error-message--phone').textContent = '';
-      return;
-    }
-    const isPhoneNumberValid = validatePhoneNumber(phoneNumber);
-    if (isPhoneNumberValid === false)
-      document.getElementById('error-message--phone').textContent =
-        'Veuillez saisir votre numéro sans espace (entre 7 et 16 chiffres, format attendu : 0123456789 ou +33123456789)';
-    else document.getElementById('error-message--phone').textContent = '';
+    const phoneNumberFeedbackMessage = validatePhoneNumber(evt.target.value);
+    document.getElementById('error-message--phone').textContent =
+      phoneNumberFeedbackMessage;
   };
 
   const verifyMessage = (evt) => {
-    const message = evt.target.value;
-    if (message === '') {
-      document.getElementById('error-message--message').textContent = '';
-      return;
-    }
-    const isMessageValid = validateMessage(message);
-    if (isMessageValid === false)
-      document.getElementById('error-message--message').textContent =
-        'Dites-moi en un peu plus (minimum 50 caractères).';
-    else document.getElementById('error-message--message').textContent = '';
+    const messageFeedbackMessage = validateMessage(evt.target.value);
+    document.getElementById('error-message--message').textContent =
+      messageFeedbackMessage;
   };
 
   const displayMessageCharacters = (evt) => {
@@ -99,17 +69,27 @@ export default function Contact() {
     document.getElementById('message').value = '';
   }
 
-  function displayEmailConfirmationMessage() {}
+  function displayEmailConfirmationMessage() {
+    emailConfirmationDialog.current.showModal();
+  }
 
-  function displayEmailErrorMessage() {}
+  function displayEmailSendingErrorMessage() {
+    emailSendingErrorDialog.current.showModal();
+  }
 
   async function handleSubmit(evt) {
     evt.preventDefault();
-    const response = await sendEmail(form.current);
-    if (response.status === 200) {
+    try {
+      setIsSending(true);
+      await sendEmail(contactForm.current);
       emptyContactForm();
       displayEmailConfirmationMessage();
-    } else displayEmailErrorMessage();
+    } catch (error) {
+      console.log({ error });
+      displayEmailSendingErrorMessage();
+    } finally {
+      setIsSending(false);
+    }
   }
 
   useEffect(() => {
@@ -140,6 +120,11 @@ export default function Contact() {
 
   return (
     <main className="contact">
+      {isSending === true && (
+        <div className="sending">
+          <p className="sending__message">Envoi en cours</p>
+        </div>
+      )}
       <h2>Contact</h2>
       <p>
         Vous pouvez aller voir{' '}
@@ -160,7 +145,7 @@ export default function Contact() {
         Sinon, vous pouvez m'envoyer un mail via le formulaire de contact
         ci-dessous. Réponse rapide garantie !
       </p>
-      <form className="contact__form" ref={form} onSubmit={handleSubmit}>
+      <form className="contact__form" ref={contactForm} onSubmit={handleSubmit}>
         <div>
           <section className="contact__form__section">
             <div className="contact__form__field">
@@ -251,6 +236,33 @@ export default function Contact() {
           Envoyer
         </button>
       </form>
+      <dialog
+        className="email-confirmation-message"
+        id="email-confirmation-message"
+        ref={emailConfirmationDialog}
+      >
+        <form method="dialog" className="email-confirmation-message__form">
+          <p className="email-confirmation-message__text">
+            Votre message a été envoyé avec succès. A bientôt !
+          </p>
+          <button>OK</button>
+        </form>
+      </dialog>
+      <dialog
+        className="email-sending-error-message"
+        id="email-sending-error-message"
+        ref={emailSendingErrorDialog}
+      >
+        <form method="dialog" className="email-sending-error-message__form">
+          <p className="email-sending-error-message__text">
+            Désolé, votre message n'a pas pu être envoyé.
+          </p>
+          <p className="email-sending-error-message__text">
+            Veuillez réessayer ultérieurement. Merci !
+          </p>
+          <button>OK</button>
+        </form>
+      </dialog>
     </main>
   );
 }

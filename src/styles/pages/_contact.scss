@@ -83,3 +83,69 @@
 :is(input, textarea):not(:focus):not(:placeholder-shown):invalid {
   border: 1px solid vars.$color-warning;
 }
+
+.sending,
+.email-confirmation-message,
+.email-sending-error-message {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: vars.$color-primary--translucent;
+
+  &__message {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: vars.$color-secondary--dark;
+    background-color: vars.$color-tertiary;
+    border-radius: 25px;
+  }
+}
+
+.email-confirmation-message {
+  color: vars.$color-secondary--dark;
+  background-color: vars.$color-tertiary;
+  border-radius: 5px;
+
+  &::backdrop {
+    background-color: vars.$color-primary--translucent;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    margin: 0.5rem auto;
+  }
+}
+
+.email-sending-error-message {
+  color: vars.$color-warning;
+  background-color: vars.$color-tertiary;
+  border-radius: 5px;
+
+  &::backdrop {
+    background-color: vars.$color-primary--translucent;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__text {
+    margin: 0.5rem auto;
+  }
+}
