@@ -85,8 +85,8 @@
 }
 
 .sending,
-.email-confirmation-message,
-.email-sending-error-message {
+.email-success-message,
+.email-error-message {
   position: fixed;
   top: 0;
   right: 0;
@@ -108,7 +108,7 @@
   }
 }
 
-.email-confirmation-message {
+.email-success-message {
   color: vars.$color-secondary--dark;
   background-color: vars.$color-tertiary;
   border-radius: 5px;
@@ -129,7 +129,7 @@
   }
 }
 
-.email-sending-error-message {
+.email-error-message {
   color: vars.$color-warning;
   background-color: vars.$color-tertiary;
   border-radius: 5px;

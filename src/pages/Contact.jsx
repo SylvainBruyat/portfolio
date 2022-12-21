@@ -10,15 +10,10 @@ import {
 
 export default function Contact() {
   const [isSending, setIsSending] = useState(false);
+  const [emailSuccessfullySent, setEmailSuccessfullySent] = useState(true);
 
   const contactForm = useRef(null);
   const emailConfirmationDialog = useRef(null);
-  const emailSendingErrorDialog = useRef(null);
-
-  /****************************************************************************
-   ** Reste à afficher le message de confirmation ou d'erreur dynamiquement ***
-   ** selon la réponse à l'envoi **********************************************
-   ****************************************************************************/
 
   const maximumMessageLength = 3000;
   const minimumMessageLength = 50;
@@ -70,11 +65,13 @@ export default function Contact() {
   }
 
   function displayEmailConfirmationMessage() {
+    setEmailSuccessfullySent(true);
     emailConfirmationDialog.current.showModal();
   }
 
   function displayEmailSendingErrorMessage() {
-    emailSendingErrorDialog.current.showModal();
+    setEmailSuccessfullySent(false);
+    emailConfirmationDialog.current.showModal();
   }
 
   async function handleSubmit(evt) {
@@ -234,30 +231,37 @@ export default function Contact() {
           Envoyer
         </button>
       </form>
+
       <dialog
-        className="email-confirmation-message"
-        id="email-confirmation-message"
+        className={
+          emailSuccessfullySent
+            ? 'email-success-message'
+            : 'email-error-message'
+        }
         ref={emailConfirmationDialog}
       >
-        <form method="dialog" className="email-confirmation-message__form">
-          <p className="email-confirmation-message__text">
-            Votre message a été envoyé avec succès. A bientôt !
-          </p>
-          <button>OK</button>
-        </form>
-      </dialog>
-      <dialog
-        className="email-sending-error-message"
-        id="email-sending-error-message"
-        ref={emailSendingErrorDialog}
-      >
-        <form method="dialog" className="email-sending-error-message__form">
-          <p className="email-sending-error-message__text">
-            Désolé, votre message n'a pas pu être envoyé.
-          </p>
-          <p className="email-sending-error-message__text">
-            Veuillez réessayer ultérieurement. Merci !
-          </p>
+        <form
+          method="dialog"
+          className={
+            emailSuccessfullySent
+              ? 'email-success-message__form'
+              : 'email-error-message__form'
+          }
+        >
+          {emailSuccessfullySent ? (
+            <p className="email-success-message__text">
+              Votre message a été envoyé avec succès. A bientôt !
+            </p>
+          ) : (
+            <>
+              <p className="email-error-message__text">
+                Désolé, votre message n'a pas pu être envoyé.
+              </p>
+              <p className="email-error-message__text">
+                Veuillez réessayer ultérieurement. Merci !
+              </p>
+            </>
+          )}
           <button>OK</button>
         </form>
       </dialog>
