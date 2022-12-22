@@ -146,9 +146,9 @@ export default function Home() {
             <span className="text-emphasis">stack MERN</span>, entre autres.
           </p>
           <p>
-            J'ai également acquis beaucoup d'autres compétences, notamment sur
-            le <span className="text-emphasis">travail d'équipe</span>, la
-            gestion de projet, ou encore la{' '}
+            J'ai aussi acquis beaucoup d'autres compétences, notamment sur le{' '}
+            <span className="text-emphasis">travail d'équipe</span>, la gestion
+            de projet, ou encore la{' '}
             <span className="text-emphasis">résolution de problèmes</span>{' '}
             durant mes 15 ans d'expérience professionnelle dans l'industrie
             aéronautique.

@@ -101,8 +101,8 @@ export default function About() {
               pendant 15 ans, j’ai toujours apporté une attention particulière
               au service et à la{' '}
               <span className="text-emphasis">satisfaction du client</span>. Et
-              j’ai au fil du temps travaillé selon la plupart des méthodes les
-              plus courantes : scrum, agile, 5S, lean, etc.
+              j’ai déjà travaillé selon la plupart des méthodes d'organisation
+              les plus courantes : agile, scrum, 5S, lean, etc.
             </p>
             <p>
               Enfin, les années passées à tester des moteurs d’avion et leurs
@@ -192,7 +192,8 @@ export default function About() {
               <span className="text-emphasis text-emphasis--dark">
                 je peux m'adapter{' '}
               </span>
-              et par exemple apprendre un nouveau framework selon vos besoins.
+              et par exemple apprendre un nouveau framework JavaScript pour
+              répondre à vos besoins.
             </p>
             <p>
               Pour compléter cela, j'utilise évidemment{' '}

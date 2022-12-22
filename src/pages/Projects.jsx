@@ -9,8 +9,8 @@ export default function Projects() {
       <p>Voici mes derniers projets réalisés.</p>
       <p>
         Certains seront un peu long à s'afficher au départ. Ce ne sont pas des
-        problèmes de performance. Il faut juste un peu de temps pour que le
-        service d'hébergement gratuit se réveille.{' '}
+        problèmes de performance de code. Il faut juste un peu de temps pour que
+        le service d'hébergement gratuit se réactive.
       </p>
       <section className="projects-wrapper">
         {projects.map((project) => (
