@@ -196,19 +196,21 @@ export default function Contact() {
             <p id="error-message--phone" className="error-message"></p>
           </section>
         </div>
-        <div>
-          <div className="contact__form__field">
-            <label htmlFor="subject">Objet</label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              placeholder="Objet de votre mail"
-              required
-            />
+        <section className="contact__form__section contact__form__section--subject">
+          <div>
+            <div className="contact__form__field">
+              <label htmlFor="subject">Objet</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="Objet de votre mail"
+                required
+              />
+            </div>
+            <p id="error-message--subject" className="error-message"></p>
           </div>
-          <p id="error-message--subject" className="error-message"></p>
-        </div>
+        </section>
         <label htmlFor="message">Votre message</label>
         <textarea
           id="message"

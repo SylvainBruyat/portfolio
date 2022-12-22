@@ -19,11 +19,17 @@
 
     &__section {
       width: 45%;
+
+      &--subject {
+        width: 100%;
+      }
     }
 
     &__field {
       display: flex;
       flex-direction: column;
+      max-width: 350px;
+      width: 100%;
     }
 
     &__message {
