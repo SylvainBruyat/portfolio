@@ -3,7 +3,18 @@ import { NavLink } from 'react-router-dom';
 export default function Header() {
   return (
     <header className="header">
-      <h1 className="header__h1">Sylvain Bruyat | Développeur Web Freelance</h1>
+      <div className="header__logo-h1">
+        <NavLink to="/">
+          <img
+            src={require('../assets/images/logo_200-200_no-background.png')}
+            alt="Logo de Sylvain Bruyat Développeur Web"
+            className="header__logo"
+          />
+        </NavLink>
+        <h1 className="header__h1">
+          Sylvain Bruyat | Développeur Web Freelance
+        </h1>
+      </div>
       <nav className="header__nav">
         <ul className="header__links-list">
           <li>
