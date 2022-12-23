@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 export default function ButtonLink({
   href,
   text,
@@ -5,11 +7,11 @@ export default function ButtonLink({
   includeArrow,
 }) {
   return (
-    <a href={href} className={`${listOfClasses}`}>
+    <NavLink to={href} className={`${listOfClasses}`}>
       {text}{' '}
       {includeArrow === true && (
         <span className="button-link__arrow">&rArr;</span>
       )}
-    </a>
+    </NavLink>
   );
 }
