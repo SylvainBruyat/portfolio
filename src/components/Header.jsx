@@ -25,8 +25,12 @@ export default function Header() {
                   ? 'header__links header__links--active'
                   : 'header__links'
               }
+              aria-label="Accueil"
             >
-              <i className="fa-solid fa-house header__links__icon"></i>
+              <i
+                className="fa-solid fa-house header__links__icon"
+                aria-hidden="true"
+              ></i>
               <span className="header__links__text">Accueil</span>
             </NavLink>
           </li>
@@ -38,8 +42,12 @@ export default function Header() {
                   ? 'header__links header__links--active'
                   : 'header__links'
               }
+              aria-label="A propos"
             >
-              <i className="fa-regular fa-id-card header__links__icon"></i>
+              <i
+                className="fa-regular fa-id-card header__links__icon"
+                aria-hidden="true"
+              ></i>
               <span className="header__links__text">A propos</span>
             </NavLink>
           </li>
@@ -51,8 +59,12 @@ export default function Header() {
                   ? 'header__links header__links--active'
                   : 'header__links'
               }
+              aria-label="Projets"
             >
-              <i className="fa-solid fa-laptop-code header__links__icon"></i>
+              <i
+                className="fa-solid fa-laptop-code header__links__icon"
+                aria-hidden="true"
+              ></i>
               <span className="header__links__text">Projets</span>
             </NavLink>
           </li>
@@ -64,8 +76,12 @@ export default function Header() {
                   ? 'header__links header__links--active'
                   : 'header__links'
               }
+              aria-label="Contact"
             >
-              <i className="fa-regular fa-envelope header__links__icon"></i>
+              <i
+                className="fa-regular fa-envelope header__links__icon"
+                aria-hidden="true"
+              ></i>
               <span className="header__links__text">Contact</span>
             </NavLink>
           </li>
