@@ -21,7 +21,7 @@ export default function Home() {
             includeArrow={false}
           />
           <ButtonLink
-            href="/about"
+            href="/a-propos"
             text="En savoir plus"
             listOfClasses="button-link hero-button hero-button--secondary"
             includeArrow={false}
@@ -59,7 +59,7 @@ export default function Home() {
               </p>
               <p className="homepage__button-wrapper">
                 <ButtonLink
-                  href="/about"
+                  href="/a-propos"
                   text="A propos"
                   listOfClasses="button-link"
                   includeArrow={true}
@@ -127,7 +127,7 @@ export default function Home() {
               </p>
               <p className="homepage__button-wrapper">
                 <ButtonLink
-                  href="/projects"
+                  href="/projets"
                   text="Portfolio"
                   listOfClasses="button-link"
                   includeArrow={true}
