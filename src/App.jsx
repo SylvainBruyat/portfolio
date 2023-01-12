@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import LegalNotices from './pages/LegalNotices';
 import NotFound from './pages/NotFound';
 
 import Header from './components/Header';
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/a-propos" element={<About />}></Route>
           <Route path="/projets" element={<Projects />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/mentions-legales" element={<LegalNotices />}></Route>
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </ScrollToTop>
