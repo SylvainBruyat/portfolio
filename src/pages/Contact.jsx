@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import {
   sendEmail,
   validateFirstName,
@@ -87,32 +87,6 @@ export default function Contact() {
     setIsSending(false);
   }
 
-  useEffect(() => {
-    const firstNameInput = document.getElementById('first-name');
-    const lastNameInput = document.getElementById('last-name');
-    const emailInput = document.getElementById('email');
-    const phoneInput = document.getElementById('phone');
-    const messageInput = document.getElementById('message');
-
-    setTimeout(() => {
-      firstNameInput.addEventListener('change', verifyFirstName);
-      lastNameInput.addEventListener('change', verifyLastName);
-      emailInput.addEventListener('change', verifyEmail);
-      phoneInput.addEventListener('change', verifyPhoneNumber);
-      messageInput.addEventListener('change', verifyMessage);
-      messageInput.addEventListener('input', displayMessageCharacters);
-    }, 500);
-
-    return function cleanupEventListeners() {
-      firstNameInput.removeEventListener('change', verifyFirstName);
-      lastNameInput.removeEventListener('change', verifyLastName);
-      emailInput.removeEventListener('change', verifyEmail);
-      phoneInput.removeEventListener('change', verifyPhoneNumber);
-      messageInput.removeEventListener('change', verifyMessage);
-      messageInput.removeEventListener('input', displayMessageCharacters);
-    };
-  }, []);
-
   return (
     <main className="contact">
       {isSending === true && (
@@ -151,6 +125,7 @@ export default function Contact() {
                 name="first-name"
                 placeholder="Prénom"
                 required
+                onBlur={verifyFirstName}
               />
             </div>
             <p id="error-message--first-name" className="error-message"></p>
@@ -164,6 +139,7 @@ export default function Contact() {
                 name="last-name"
                 placeholder="Nom"
                 required
+                onBlur={verifyLastName}
               />
             </div>
             <p id="error-message--last-name" className="error-message"></p>
@@ -179,6 +155,7 @@ export default function Contact() {
                 name="email"
                 placeholder="exemple@mail.com"
                 required
+                onBlur={verifyEmail}
               />
             </div>
             <p id="error-message--email" className="error-message"></p>
@@ -191,6 +168,7 @@ export default function Contact() {
                 id="phone"
                 name="phone"
                 placeholder="0123456789 ou +33123456789"
+                onBlur={verifyPhoneNumber}
               />
             </div>
             <p id="error-message--phone" className="error-message"></p>
@@ -222,6 +200,8 @@ export default function Contact() {
           minLength={minimumMessageLength}
           maxLength={maximumMessageLength}
           required
+          onBlur={verifyMessage}
+          onInput={displayMessageCharacters}
         ></textarea>
         <div className="contact__form__message-indications">
           <p id="error-message--message" className="error-message"></p>
