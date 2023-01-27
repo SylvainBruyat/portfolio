@@ -58,7 +58,7 @@
       { "name": "MongoDB", "logo": "mongodb.png" }
     ],
     "githubLink": "https://github.com/SylvainBruyat/OC-P6-Piiquante-backend",
-    "projectLink": ""
+    "projectLink": "https://hottakes.sylvain-bruyat.dev"
   },
   {
     "id": "formation-P7",
@@ -76,7 +76,7 @@
       { "name": "MongoDB", "logo": "mongodb.png" }
     ],
     "githubLink": "https://github.com/SylvainBruyat/OC-P7-Groupomania",
-    "projectLink": ""
+    "projectLink": "https://groupomania.sylvain-bruyat.dev/"
   },
   {
     "id": "perso-1",
